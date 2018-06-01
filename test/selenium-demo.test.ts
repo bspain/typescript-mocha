@@ -1,6 +1,7 @@
 import * as webdriver from 'selenium-webdriver';
 import * as fs from 'fs';
 import { should } from 'chai';
+import DoesFileExistOnEnvironmentPath from '../src/EnvPathSearcher';
 
 should();
 
@@ -8,6 +9,13 @@ describe('Selenium Demo Test Suite', () =>
 {
     it('should automate Firefox browser', (done) => 
     {
+        // Confirm geckodriver
+        if (!(DoesFileExistOnEnvironmentPath('geckodriver.exe')))
+        {
+            console.log("Skipping based on absense of geckodriver.exe");
+            done();
+        }
+
         let driver = new webdriver.Builder().forBrowser('firefox')
             .build();
         driver.get('https://www.bing.com')
