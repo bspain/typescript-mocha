@@ -10,7 +10,7 @@ describe('Selenium Demo Test Suite', () =>
     before(function() /* Use of function (vs arrow () =>) is necessary to preserve 'this' context */
     {
         // Confirm geckodriver
-        if (!(DoesFileExistOnEnvironmentPath('geckodriver2.exe')))
+        if (!(DoesFileExistOnEnvironmentPath('geckodriver.exe')))
         {
             console.log("Skipping based on absense of geckodriver.exe");
             this.skip();
