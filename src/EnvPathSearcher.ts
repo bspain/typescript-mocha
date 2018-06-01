@@ -16,7 +16,6 @@ export default function DoesFileExistOnEnvironmentPath(filename: string) : boole
             let stats = fs.statSync(search);
             if (stats != null)
             {
-                debugger;
                 return true;
             }
         }
@@ -26,7 +25,6 @@ export default function DoesFileExistOnEnvironmentPath(filename: string) : boole
         }
     };
 
-    debugger;
     return false;
 }
 
