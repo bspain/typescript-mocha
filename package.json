@@ -14,14 +14,14 @@
   },
   "devDependencies": {
     "@types/chai": "^4.0.5",
-    "@types/mocha": "^2.2.44",
+    "@types/mocha": "^5.2.0",
     "@types/node": "^6.0.111",
     "@types/selenium-webdriver": "^3.0.8",
     "chai": "^4.1.2",
     "del": "^3.0.0",
     "gulp": "^3.9.1",
     "gulp-typescript": "^3.2.3",
-    "mocha": "^4.0.1",
+    "mocha": "^5.2.0",
     "mochawesome": "^2.3.1",
     "selenium-webdriver": "^4.0.0-alpha.1"
   }

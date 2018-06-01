@@ -19,7 +19,7 @@ export default function DoesFileExistOnEnvironmentPath(filename: string) : boole
                 return true;
             }
         }
-        catch
+        catch(e)
         {
 
         }

@@ -7,14 +7,18 @@ should();
 
 describe('Selenium Demo Test Suite', () =>
 {
-    it('should automate Firefox browser', (done) => 
+    before(function() /* Use of function (vs arrow () =>) is necessary to preserve 'this' context */
     {
         // Confirm geckodriver
-        if (!(DoesFileExistOnEnvironmentPath('geckodriver.exe')))
+        if (!(DoesFileExistOnEnvironmentPath('geckodriver2.exe')))
         {
             console.log("Skipping based on absense of geckodriver.exe");
-            done();
+            this.skip();
         }
+    });
+
+    it('should automate Firefox browser', (done) => 
+    {
 
         let driver = new webdriver.Builder().forBrowser('firefox')
             .build();
